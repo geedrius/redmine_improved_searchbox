@@ -1,4 +1,7 @@
 $(function(){
+    if ($(window).width() < 900) 
+        return;
+
 	var str = $('#project_quick_jump_box option:first').text();
 	$('#project_quick_jump_box option:first').text("").val("");
 	$('#project_quick_jump_box').attr("data-placeholder", str).select2({ width: function() {
